@@ -132,7 +132,7 @@ unsigned char checksum (double* dados, int n_amostras)
     for(i=0; i<n_amostras; i++)
     {
         //converte o valor da amostra atual para numero em valor absoluto em inteiro em 8 bits ou 1 byte, e arredondando.
-        recebeDados=(int)((fabs(dados[i])*255) + 0.5);
+        recebeDados=((int)(fabs(dados[i])*255) + 0.5);
 
         //se o numero for maior que 255, crava em 255;
         if(recebeDados>255)
